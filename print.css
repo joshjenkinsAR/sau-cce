@@ -1,0 +1,21 @@
+@media print {
+	#header-links { display: none; }
+	#navigation { display: none; }
+	#the-top, .site-title { display: none; }
+.nav-secondary { display: none; }
+#generalFooter { display: none; }
+#site-logo { display: none; }
+#site-container { display: none; }
+.content, .sidebar { width: 100%; }
+a:link, 
+a:visited { 
+	background: transparent;
+	text-decoration: underline; 
+	font-weight: normal;
+}
+a:link:after, 
+a:visited:after { 
+	content: " (" attr(href) ") "; 
+	font-size: 12px; 
+}
+}

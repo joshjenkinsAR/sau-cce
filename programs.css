@@ -1,0 +1,13 @@
+.dp-thumbnail {
+float: left;
+margin: 0px 10px 0px 0px;
+padding: 3px;
+border: 1px solid #e9e9e9;
+}
+.dp-wrap {
+clear: both;
+padding: 14px 0px;
+}
+.dp-title h3 {
+margin: 0px; 
+}

@@ -1,0 +1,13 @@
+#header-links { margin-top: 15px; }
+#search input[type='submit'] { margin-top: 2px; margin-left: -50px; }
+#search input[type='search'] { width: 160px; }
+#search {margin-top: 18px; min-width: 140px; }
+.tp-caption.sfl, .tp-caption.sfr {background: #000;}
+#site-logo { width: 420px; }
+.ubermenu {background: transparent; width: 100% !important;}
+ul.ubermenu-nav {
+    float: right;
+	width: 100% !important; 
+}
+#home-secondary .icons li { 25px 3%; }
+.shrink .nav-primary .wrap { right: 0px; left: 250px;}
