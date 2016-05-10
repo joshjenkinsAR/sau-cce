@@ -52,7 +52,7 @@ add_action( 'wp_enqueue_scripts', 'sau_register_styles' );
 function sau_register_styles() {
 	wp_register_style( 'minimum-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
 	wp_register_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
-	wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800|Roboto+Slab:400,300,700|Roboto:400,600,800');
+	wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800|Roboto+Slab:400,300,700');
 	wp_enqueue_style( 'minimum-font-awesome' );
 	wp_register_style('printstyles', '/wp-content/themes/sau-cce/print.css');
 	wp_enqueue_style( 'printstyles' );
@@ -67,6 +67,7 @@ function child_do_doctype() {
 	<head>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
+<meta name="theme-color" content="#003087">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php
