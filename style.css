@@ -1,5 +1,5 @@
 /*
-	Theme Name: SAU-CCE
+	Theme Name: SAU-CCE-Git
 	Author: Josh Jenkins
 	Template: genesis
 	Version: 2.1.1
@@ -802,7 +802,7 @@ a.alignright {
 --------------------------------------------- */
 
 .entry-title {font-size: 26px;font-size: 2.6rem;margin-top: 15px;line-height: 1;font-family: 'Roboto Slab', 'Open Sans', sans-serif;font-weight: 500;border-bottom: 1px solid #e4e4e4;width: 89%;color: #333333;}
-.site-title a {padding: 5px 36px;display: inline-block;border-radius: 2px;font-family: 'Open Sans';line-height: 1.3em;color: #444;background: #FFF;background: rgba(255, 255, 255, 0.85);font-size: 4.5rem;letter-spacing: -1px;font-weight: 600;}
+.site-title a {padding: 5px 36px;display: inline-block;border-radius: 2px;font-family: 'Roboto Slab', 'Open Sans';line-height: 1.3em;color: #444;background: #FFF;background: rgba(255, 255, 255, 0.85);font-size: 4.5rem;letter-spacing: -1px;font-weight: 600;}
 .site-title a.social_stuff {
 background: #163A86 !important;
 font-size: 15px !important;
@@ -1161,7 +1161,7 @@ z-index: 999;
 right: 0;
 }
 #search .search-form {
-background: url('/wp-content/themes/sau-cce/images/transpBlack25.png') repeat;
+background: url('./images/transpBlack25.png') repeat;
 padding: 0px;
 max-height: 33px;
 border-radius: 37px;
@@ -1180,7 +1180,7 @@ clear: both;
 display: block;
 }
 #search input[type="submit"] {
-background: url('/wp-content/themes/sau-cce/images/search-glass.png') no-repeat bottom;
+background: url('./images/search-glass.png') no-repeat bottom;
 width: 24px;
 height: 24px;
 position: relative;
@@ -1298,7 +1298,7 @@ transform: scale(1.1);
         color: #404040; }
 ul.icons a:hover { text-decoration: none;}
 #myTab > li.active {
-background: url('/wp-content/themes/sau-cce/images/arrow-gray-shadow.png') no-repeat center bottom;
+background: url('./images/arrow-gray-shadow.png') no-repeat center bottom;
 }
 /*
 Site Navigation
@@ -1342,7 +1342,7 @@ Site Navigation
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover, .genesis-nav-menu .sub-menu a:hover { text-decoration: none; background: #000;}
 
 .genesis-nav-menu>.menu-item>a {letter-spacing: 0px;font-size: 16px;font-weight: 700;font-family: 'Open Sans', sans-serif;/* text-transform: uppercase; */letter-spacing: 0px;color: #444;line-height: 15px;} 
-.genesis-nav-menu>.menu-item>a:hover { background: url('/wp-content/themes/sau-cce/images/transpBlack75.png') repeat !important; display: block; z-index: 99999; position: relative; }
+.genesis-nav-menu>.menu-item>a:hover { background: url('./images/transpBlack75.png') repeat !important; display: block; z-index: 99999; position: relative; }
 .genesis-nav-menu .sub-menu {
 	left: -9999px;
 	letter-spacing: 0;
@@ -1373,7 +1373,7 @@ border-color: #303030;
 border-bottom: 0px;
 }
 .genesis-nav-menu .sub-menu .sub-menu a:hover {
-background: url('/wp-content/themes/sau-cce/images/transpBlack75.png') repeat;
+background: url('./images/transpBlack75.png') repeat;
 }
 .genesis-nav-menu .menu-item:hover {
 	position: static;
@@ -2188,7 +2188,7 @@ vertical-align: middle;
 display: block;
 }
 #right-news .second-level a.pcs-post-title:hover, #events-listing a.pcs-post-title:hover {
-background: url('/wp-content/themes/sau-cce/images/gray-triangles.jpg') bottom center;
+background: url('./images/gray-triangles.jpg') bottom center;
 color: #000;
 transition: all .3s ease;
 text-decoration: none;
@@ -2217,7 +2217,7 @@ padding: 0px 5px;
 }
 div#about-sau {
 width: 100%;
-background: url('/wp-content/themes/sau-cce/images/gray-triangles.jpg');
+background: url('./images/gray-triangles.jpg');
 min-height: 300px;
 padding: 40px;
 padding-bottom: 90px;
@@ -2383,7 +2383,7 @@ body.page-template-page_landing-php .contents.wrap {
 /*** Sidebar menus ****/ 
 .menu-widget {
     padding: 17px;
-    background: url(https://web.saumag.edu/wp-content/themes/sau-cce/images/diagonal-noise.png);
+    background: url('./images/diagonal-noise.png');
 }
 .menu-widget ul li {
     opacity: 0.7;
@@ -2406,7 +2406,7 @@ body.page-template-page_landing-php .contents.wrap {
     text-shadow: rgb(255, 255, 255) 1px 1px 1px;
 }
 .menu-widget ul li:hover {
-background: url('/wp-content/themes/sau-cce/images/transpBlack50.png') repeat;
+background: url('./images/transpBlack50.png') repeat;
 }
 .menu-widget ul li.current-menu-item a, .menu-widget ul li:hover > a, .menu-widget a:active {
 color: #FFF;
@@ -2417,7 +2417,7 @@ background: #777;
 #scrollToTop{
     width:40px;
     height: 40px;  
-    background: url('/wp-content/themes/sau-cce/images/up.png') no-repeat bottom right;
+    background: url('./images/up.png') no-repeat bottom right;
     position:fixed;
 	z-index: 99;
     right:30px;
@@ -2764,7 +2764,7 @@ display: block !important;
 float: left;
 }
 .site-title {
-background: url('/wp-content/themes/sau-cce/images/gray-triangles.jpg') right;
+background: url('./images/gray-triangles.jpg') right;
 margin-bottom: 0px;
 padding: 30px 20px;
 float: left;
@@ -2800,7 +2800,7 @@ margin-top: 0px !important;
 }
 .ubermenu.ubermenuHorizontal ul.ubermenu-nav {
 padding-top: 0px;
-background: url('/wp-content/themes/sau-cce/images/transpBlack90.png') repeat;
+background: url('./images/transpBlack90.png') repeat;
 margin-top: -3px;
 margin-bottom: 5px;
 position: relative;
@@ -3064,7 +3064,7 @@ margin-top: 139px;
 display: none;
 }
 #backstretch { 
-background: url('/wp-content/themes/sau-cce/images/diagonal-noise.png') repeat;
+background: url('./images/diagonal-noise.png') repeat;
 }
 #shadow-div {
 display: none;

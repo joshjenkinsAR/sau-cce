@@ -69,9 +69,14 @@ wp_head(); /** we need this for plugins **/
 
 </div><div id="navigation"><?php
 do_action( 'genesis_before' );
+// Make sure we're running multisite
+if( is_multisite()) {
 switch_to_blog(1);  
+}
 do_action( 'genesis_before_header' );
+if( is_multisite()) {
 restore_current_blog();
+}
 do_action( 'genesis_header' ); ?>
 </div>
 </div>

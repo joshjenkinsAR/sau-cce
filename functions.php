@@ -3,11 +3,11 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'minimum', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'minimum' ) );
+load_child_theme_textdomain( 'sau-cce', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'sau-cce' ) );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'Minimum Pro Theme', 'minimum' ) );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/minimum/' );
+define( 'CHILD_THEME_NAME', __( 'SAU-CCE', 'sau-cce' ) );
+define( 'CHILD_THEME_URL', 'https://web.saumag.edu' );
 define( 'CHILD_THEME_VERSION', '3.0' );
 
 //* Add HTML5 markup structure
@@ -36,11 +36,11 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_action( 'wp_enqueue_scripts', 'sau_enqueue_scripts' );
 function sau_enqueue_scripts() {
 wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'reponsive-menu', '/wp-content/themes/sau-cce/js/responsive-menu.js', array( 'jquery' ), true);
-   wp_enqueue_script('bootstrap-js', '/wp-content/themes/sau-cce/js/bootstrap.min.js', array( 'jquery' ), true);
-	wp_enqueue_script('sau-smooth-scroll', '/wp-content/themes/sau-cce/js/smooth-scroll.js', array('jquery'), true );
-	wp_enqueue_script('shrink', '/wp-content/themes/sau-cce/js/shrink.js', true );	
-	wp_enqueue_script('countup', '/wp-content/themes/sau-cce/js/countUp.min.js', true );	
+	wp_enqueue_script( 'reponsive-menu', get_stylesheet_directory() . '/js/responsive-menu.js', array( 'jquery' ), true);
+   wp_enqueue_script('bootstrap-js', get_stylesheet_directory() . '/js/bootstrap.min.js', array( 'jquery' ), true);
+	wp_enqueue_script('sau-smooth-scroll', get_stylesheet_directory() . '/js/smooth-scroll.js', array('jquery'), true );
+	wp_enqueue_script('shrink', get_stylesheet_directory() . '/js/shrink.js', true );	
+	wp_enqueue_script('countup', get_stylesheet_directory() . '/js/countUp.min.js', true );	
 	wp_enqueue_script('waypoints', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', true );
 }
 
@@ -54,7 +54,7 @@ function sau_register_styles() {
 	wp_register_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
 	wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800|Roboto+Slab:400,300,700');
 	wp_enqueue_style( 'minimum-font-awesome' );
-	wp_register_style('printstyles', '/wp-content/themes/sau-cce/print.css');
+	wp_register_style('printstyles', get_stylesheet_directory() . '/print.css');
 	wp_enqueue_style( 'printstyles' );
 	wp_enqueue_style( 'bootstrap' );
 	 wp_enqueue_style( 'googleFonts');
@@ -416,6 +416,8 @@ function theme_slug_setup() {
 add_filter('pre_get_document_title', 'sau_pre_get_document_title', 10);
 add_filter('wpseo_title', 'sau_pre_get_document_title', 15);
 function sau_pre_get_document_title(){
+	// Make sure we're running multisite
+	if( is_multisite() ) {
 	global $blog_id;
 	global $post;
 	$archive_title = get_the_archive_title();
@@ -451,6 +453,7 @@ if ( ($blog_id != 1) && ( !is_home()) && (!is_front_page() ) ) {
 else {
 	return $title;
 }
+	} // end multisite if
 }
 
 /*** 

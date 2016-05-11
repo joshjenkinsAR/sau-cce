@@ -42,7 +42,7 @@ function minimum_front_page_genesis_meta() {
 		
 	}
 
-	if ( is_main_site()  ) {
+	if ( is_multisite() && is_main_site()  ) {
 
 		//* Add Home featured Widget areas
 		add_action( 'genesis_before_content_sidebar_wrap', 'minimum_home_top', 2);
