@@ -484,3 +484,22 @@ function ffw_shortcode( $atts, $content = null ) {
 	return '<div class="force-full-width">' . $content . '</div>';
 }
 add_shortcode( 'full-width', 'ffw_shortcode' );
+
+/*** 
+* filter the dave live search results to pull from different blog
+***/
+function fix_dave_links( $wpQueryResults, $deprecated, $davesWordPressLiveSearchResults ) {
+
+	// Loop through all the search results
+	foreach ( $wpQueryResults as $result ) {
+		if( is_multisite() ) {
+		switch_to_blog('33');
+		$post->permalink = get_permalink( $post->ID );
+		}
+	}
+
+	return $wpQueryResults;
+
+}
+
+add_filter( 'dwls_alter_results', 'fix_dave_links', 10, 3 );
