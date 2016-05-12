@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Theme Name: SAU-CCE-Git
 	Author: Josh Jenkins
 	Template: genesis
@@ -1784,6 +1784,9 @@ background: #f1f1f1;
 color: #333;
 clear: both;
 border-top: 1px solid #e1e1e1;
+}
+.footer-widgets a {
+    color: #13669E;
 }
 
 .footer-widgets .wrap {
