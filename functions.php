@@ -490,6 +490,9 @@ add_shortcode( 'full-width', 'ffw_shortcode' );
 ***/
 function fix_dave_links( $wpQueryResults, $deprecated, $davesWordPressLiveSearchResults ) {
 
+	// Add post object to prevent PHP warnings
+	$post = new stdClass();
+
 	// Loop through all the search results
 	foreach ( $wpQueryResults as $result ) {
 		if( is_multisite() ) {
