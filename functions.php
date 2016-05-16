@@ -491,14 +491,11 @@ add_shortcode( 'full-width', 'ffw_shortcode' );
 function fix_dave_links( $wpQueryResults, $deprecated, $davesWordPressLiveSearchResults ) {
 
 	// Loop through all the search results
-	while ( $wp_query->have_posts() ) {
-			$wp_query->the_post();
 	foreach ( $wpQueryResults as $result ) {
 		if( is_multisite() ) {
 		switch_to_blog('33');
 		$post->permalink = get_permalink( $post->ID );
 		}
-	}
 	}
 
 	return $wpQueryResults;
