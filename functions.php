@@ -53,10 +53,12 @@ function sau_register_styles() {
 	wp_register_style( 'minimum-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
 	wp_register_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
 	wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800|Roboto+Slab:400,300,700');
+	wp_register_style( 'sau-cce-style', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'minimum-font-awesome' );
 	wp_register_style('printstyles', get_stylesheet_directory_uri() . '/print.css');
 	wp_enqueue_style( 'printstyles' );
 	wp_enqueue_style( 'bootstrap' );
+	wp_enqueue_style( 'sau-cce-style' );
 	 wp_enqueue_style( 'googleFonts');
 }
 
