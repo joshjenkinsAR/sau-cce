@@ -2099,6 +2099,7 @@ body.home ul.post-list.with-excerpt, .page-id-7 ul.post-list.with-excerpt {
 column-count: 1;
 -webkit-column-count: 1;
 -moz-column-count: 1;
+list-style: none;
 -o-column-count: 1;
 padding: 10px;
 }
