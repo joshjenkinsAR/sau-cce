@@ -1046,8 +1046,8 @@ Site Header
     display: block;
     z-index: -1;
     position: absolute;
-    filter: contrast(150%) blur(7px);
-    -webkit-filter: contrast(150%) blur(7px);
+    filter: contrast(150%) blur(7px) opacity(70%);
+    -webkit-filter: contrast(150%) blur(7px) opacity(70%);
 }
 .header-bar {
 width: 100%;
