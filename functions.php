@@ -508,3 +508,23 @@ function fix_dave_links( $wpQueryResults, $deprecated, $davesWordPressLiveSearch
 }
 
 add_filter( 'dwls_alter_results', 'fix_dave_links', 10, 3 );
+
+/***
+* Add transaction ID to forms with this field after a payment is processed
+***/
+
+add_action( 'gform_post_payment_action', 'save_transaction_id', 10, 2);
+function save_transaction_id( $entry, $action ) {
+    $id = rgar( $entry, 'id');
+	$trans_id = rgar( $action, 'transaction_id' );
+	$trans_form_id = rgar( $entry, 'form_id');
+	$trans_field_id = '';
+	
+	$form = GFAPI::get_form( $trans_form_id );
+	foreach( $form['fields'] as $field ) {
+	  if($field->label == 'Transaction ID'){
+		$trans_field_id = $field->id;
+	  }
+	}
+    GFAPI::update_entry_field( $id, $trans_field_id, $trans_id );
+}
