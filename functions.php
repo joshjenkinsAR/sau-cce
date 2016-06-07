@@ -528,3 +528,25 @@ function save_transaction_id( $entry, $action ) {
 	}
     GFAPI::update_entry_field( $id, $trans_field_id, $trans_id );
 }
+
+/***
+* Add transaction field data to Zapier feed
+***/
+add_filter( 'gform_zapier_field_value', 'format_entry_value', 10, 4 );
+function format_entry_value( $value, $form_id, $field_id, $entry ) {
+
+	$id = rgar( $entry, 'id');
+	$trans_form_id = rgar( $entry, 'form_id');
+	$trans_field_id = '';
+	
+	$form = GFAPI::get_form( $trans_form_id );
+	foreach( $form['fields'] as $field ) {
+	  if($field->label == 'Transaction ID'){
+		$trans_field_id = $field->id;
+		$entry = GFAPI::get_entry( $entry['id'] );
+        $value = rgar( $entry, $trans_field_id );
+	  }
+	}
+
+return $value;
+}
