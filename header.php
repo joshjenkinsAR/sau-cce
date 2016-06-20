@@ -54,7 +54,7 @@ wp_head(); /** we need this for plugins **/
 					<li><a href="/calendar">Calendar</a></li>
 					<li><a href="/directory">Directory</a></li>
 					<li><a href="https://mysau.saumag.edu">mySAU</a></li>
-					<li>Email: <a href="http://www.outlook.com/muleriders.saumag.edu">Student</a>|<a href="http://www.saumag.edu/exchange">Faculty</a></li>
+					<li>Email: <a href="http://www.outlook.com/muleriders.saumag.edu">Student</a>|<a href="https://mail.saumag.edu/owa">Faculty</a></li>
 					<li><a href="http://blackboard.saumag.edu">Blackboard</a></li>
                     <li><a href="https://wamp.saumag.edu/sys_status/status.php">Systems Status</a></li>
 					<li style="border: none;"><a href="/library">Library</a></li>

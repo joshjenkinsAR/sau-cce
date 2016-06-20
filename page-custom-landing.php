@@ -162,6 +162,12 @@ function flexible_content_sau(){
 			echo '</div></div>';
 			}
 			
+			if( get_row_layout() == 'plain_text' ){ 
+			    echo '<div class="plain-text">';
+				the_sub_field('plain_text_field');
+				echo '</div>';
+			}
+			
 			if( get_row_layout() == 'action_buttons' ){ 
 			echo '<div id="actions"><ul>';
 				$apply = get_sub_field('apply_button');
