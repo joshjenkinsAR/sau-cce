@@ -40,7 +40,7 @@ do_action( 'genesis_after_footer' );
 		</div>
 		<div class="one-fourth ilnks"><h3>Quick Links</h3>
 			<ul>
-				<li><a href="https://web.saumag.edu/academics/degree-plans/">Majors & Minors</a></li>
+				<li><a href="https://web.saumag.edu/academics/degrees/">Majors & Minors</a></li>
 				<li><a href="https://web.saumag.edu/admissions/apply/scholarships/">Scholarships & Financial Aid</a></li>
 				<li><a href="https://web.saumag.edu/international">International Student Services</a></li>
 				<li><a href="https://mysau.saumag.edu/ICS/Course_Search/">Course Schedules</a></li>
