@@ -143,6 +143,39 @@ function modify_nav_menu_args ( $args ) {
 	   restore_current_blog();
 }
 
+//* Add items to mobile primary nav
+add_filter( 'wp_nav_menu_items', 'menu_extras', 10, 2 );
+/**
+ * Filter menu items, appending either a search form or today's date.
+ *
+ * @param string   $menu HTML string of list items.
+ * @param stdClass $args Menu arguments.
+ *
+ * @return string Amended HTML string of list items.
+ */
+function menu_extras( $menu, $args ) {
+	//* Change 'primary' to 'secondary' to add extras to the secondary navigation menu
+	if ( 'primary' !== $args->theme_location )
+		return $menu;
+	//* Uncomment this block to add a search form to the navigation menu
+	/*
+	ob_start();
+	get_search_form();
+	$search = ob_get_clean();
+	$menu  .= '<li class="right search">' . $search . '</li>';
+	*/
+	
+	$menu .= '<div class="home-footer menu"><div class="foot-actions">
+			<a href="https://web.saumag.edu/calendar"><i class="fa fa-calendar-o"></i>Calendar</a>
+			<a href="https://admin.saumag.edu/cc3/giving.html"><i class="fa fa-gift"></i>Give</a>
+			<a href="https://web.saumag.edu/ask"><i class="fa fa-question-circle"></i>Ask SAU</a>
+			<a href="https://web.saumag.edu/directory"><i class="fa fa-fax"></i>Directory</a>
+			<a href="https://web.saumag.edu/apply"><i class="fa fa-check-square-o "></i>Apply Now</a>
+			</div></div>';
+	
+	return $menu;
+}
+
 /**
  * Filter Genesis H1 Post Titles to add <span> for styling
  * 
