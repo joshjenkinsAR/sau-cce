@@ -39,7 +39,7 @@ wp_head(); /** we need this for plugins **/
 				<input type="search" name="q" size="40" id="gcsinput" placeholder="Search …" aria-label="Search" label="search"/>
 				<input type="hidden" name="cx" value="013696501293641384261:ftpfsl2uctk" />
 				<input type="hidden" name="cof" value="FORID:11" />
-				<input type="submit" name="sa" value="Submit" id="gscsubmit" aria-label="Submit" label="Submit"/>
+				<input type="submit" name="sa" value="&#xf002;" id="gscsubmit" aria-label="Submit" label="Submit"/>
 				</form>
 			</div>
 			<div id="header-links">

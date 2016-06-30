@@ -36,8 +36,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_action( 'wp_enqueue_scripts', 'sau_enqueue_scripts' );
 function sau_enqueue_scripts() {
 wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'reponsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), true);
-   wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri() .'/js/bootstrap.min.js', array( 'jquery' ), true);
+	wp_enqueue_script( 'reponsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), false);
+    wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri() .'/js/bootstrap.min.js', array( 'jquery' ), true);
 	wp_enqueue_script('sau-smooth-scroll', get_stylesheet_directory_uri() .'/js/smooth-scroll.js', array('jquery'), true );
 	wp_enqueue_script('shrink', get_stylesheet_directory_uri() . '/js/shrink.js', true );	
 	wp_enqueue_script('countup', get_stylesheet_directory_uri() .'/js/countUp.min.js', true );	
@@ -53,7 +53,6 @@ function sau_register_styles() {
 	wp_register_style( 'minimum-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
 	wp_register_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
 	wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800|Roboto+Slab:400,300,700');
-	wp_register_style( 'sau-cce-style', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'minimum-font-awesome' );
 	wp_register_style('printstyles', get_stylesheet_directory_uri() . '/print.css');
 	wp_enqueue_style( 'printstyles' );
@@ -158,22 +157,6 @@ function ac_post_title_output( $title ) {
 	return $title;
 }
 
-
-
-/************* THIS INCLUDES THE THUMBNAIL IN OUR RSS FEED
-function featuredtoRSS($content) {
-global $post;
-if ( has_post_thumbnail( $post->ID ) ){
-$content = '<div>' . get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'style' => 'margin-bottom: 15px;' ) ) . '</div>' . $content;
-}
-return $content;
-}
- 
-add_filter('the_excerpt_rss', 'featuredtoRSS');
-add_filter('the_content_feed', 'featuredtoRSS');
-*************/
-
-//* Modify Read More text
  //Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
@@ -548,4 +531,19 @@ $value = rgar( $entry, $trans_field_id );
 }
 
 return $value;
+}
+
+/******
+* Modify print.css for gravity forms entry printing
+******/
+add_filter( 'gform_print_styles', 'add_styles', 10, 2 );
+function add_styles( $value, $form ) {
+
+    if ( $form['id'] != 8 ) {
+        return $value;
+    }
+
+    wp_register_style( 'print_entry', get_template_directory_uri() . '/print_entry.css' );
+
+    return array( 'print_entry' );
 }

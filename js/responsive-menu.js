@@ -1,14 +1,14 @@
 jQuery(function( $ ){
 
-	$(".nav-secondary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon">');
+	$(".nav-secondary .genesis-nav-menu, .nav-primary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon">');
 
 	$(".responsive-menu-icon").click(function(){
-		$(this).next(".nav-secondary .genesis-nav-menu").slideToggle();
+		$(this).next(".nav-secondary .genesis-nav-menu, .nav-primary .genesis-nav-menu").slideToggle();
 	});
 
 	$(window).resize(function(){
 		if(window.innerWidth > 768) {
-			$(".nav-secondary .genesis-nav-menu, nav .sub-menu").removeAttr("style");
+			$(".nav-secondary .genesis-nav-menu, nav .sub-menu, .nav-primary .genesis-nav-menu").removeAttr("style");
 			$(".responsive-menu > .menu-item").removeClass("menu-open");
 		}
 	});
