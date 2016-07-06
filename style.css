@@ -2958,9 +2958,6 @@ Media Queries
     font-size: 18px;
 	background: #011333;
 }
-.genesis-nav-menu.responsive-menu .current-menu-item> a {
-	background: #f5f5f5;
-}
 
 .nav-primary .genesis-nav-menu .menu-item-has-children span:after {
     content: none;
