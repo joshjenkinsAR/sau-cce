@@ -42,7 +42,7 @@ do_action( 'genesis_after_footer' );
 			<ul>
 				<li><a href="https://web.saumag.edu/academics/degrees/">Majors & Minors</a></li>
 				<li><a href="https://web.saumag.edu/admissions/apply/scholarships/">Scholarships & Financial Aid</a></li>
-				<li><a href="https://web.saumag.edu/international">International Student Services</a></li>
+				<li><a href="https://web.saumag.edu/bulletin">Mulerider Bulletin</a></li>
 				<li><a href="https://mysau.saumag.edu/ICS/Course_Search/">Course Schedules</a></li>
 				<li><a href="https://web.saumag.edu/registrar/transcripts/">Transcript Request</a></li>
 				<li><a href="http://www.sau.bkstr.com/">Bookstore</a></li>
