@@ -2,7 +2,7 @@
 	Theme Name: sau-cce
 	Author: Josh Jenkins
 	Template: genesis
-	Version: 2.2
+	Version: 2.2.1
     GitHub Theme URI: https://github.com/joshjenkinsAR/sau-cce
     GitHub Branch:    master
 */
@@ -282,7 +282,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6, #shared-faqs .pcs-post-title {
     color: #555 !important;
-    font-family: 'Open Sans', Helvetica, Helvetica Neue, sans-serif !important;
+    font-family: 'Roboto Slab', 'Open Sans', Helvetica, Helvetica Neue, sans-serif !important;
     font-weight: 600 !important;
     line-height: 1.2;
     margin: 30px 0 15px;
@@ -291,7 +291,6 @@ h1, h2, h3, h4, h5, h6, #shared-faqs .pcs-post-title {
 h1 {
     font-size: 30px !important;
     font-size: 3rem !important;
-    font-family: 'Open Sans', sans-serif !important;
 }
 h2 {
     font-family: 'Open Sans', sans-serif, !important;
@@ -623,7 +622,7 @@ a.alignleft, a.alignright {
     color: #424242;
     background: #FFF;
     background: rgba(255, 255, 255, 0.85);
-    font-size: 5.5rem;
+    font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 600;
 }
@@ -814,6 +813,7 @@ Site Header
     width: 100%;
     background: #003087;
     height: 104px;
+    transition: all .3s ease;
 }
 #sticky-container {
     position: fixed;
@@ -830,7 +830,9 @@ Site Header
     margin-top: -1px;
     margin-left: 15px;
     display: inline-block;
+    width: 285px;
     position: relative;
+    transition: all .2s ease;
 }
 #site-logo a:hover {
     opacity: .8;
@@ -845,6 +847,7 @@ Site Header
     float: right;
     display: inline-block;
     position: relative;
+    transition: all .3s ease;
 }
 #header-links li a {
     color: #d9d9d9;
@@ -924,6 +927,7 @@ ul. #header-links li a:hover {
     right: 20px;
     clear: both;
     margin-top: 3px;
+    transition: all .3s ease;
 }
 .search-form input[type="submit"] {
     border: 0;
@@ -1037,7 +1041,7 @@ Site Navigation
 .genesis-nav-menu>.menu-item>a {
     letter-spacing: 0px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     /* text-transform: uppercase; */
     letter-spacing: 0px;
@@ -1056,6 +1060,7 @@ Site Navigation
     letter-spacing: 0;
     opacity: 0;
     position: absolute;
+    transition: all .3s ease;
     width: 160px;
     z-index: 99;
     text-align: left;
@@ -1499,6 +1504,7 @@ div.homeFooter a {
     text-transform: uppercase;
     font-weight: 600 !important;
     margin-bottom: 11px;
+    font-family: 'Open Sans' !important;
 }
 div.one-third.social {
     margin: 0px;
@@ -1806,19 +1812,19 @@ Animated top menu */
 
 #the-top.shrink-thetop {
     height: 45px;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
-#the-top.shrink-thetop #header-links, #the-top.shrink-thetop #search {
-    display: none;
+#the-top.shrink-thetop #header-links{
+    margin-top: -100px;
+    transition: all .3s ease;
 }
 #the-top.shrink-thetop #search {
- margin-top: 6px
-}
-#the-top.shrink-thetop div#shadow-div {
-    display: none;
+    margin-top: -70px;
+    transition: all .5s ease;
 }
 #the-top.shrink-thetop #site-logo img {
     width: 128px;
+    transition: all .2s ease;
 }
 .shrink #navigation {
     margin-top:-45px;
@@ -2236,6 +2242,9 @@ Media Queries
     }
 /** Header responsive
 ----------------------------**/
+#sticky-container {
+	position: relative;
+}
 #site-logo {
     width: 275px;
     float: left;
@@ -2307,7 +2316,6 @@ Media Queries
         padding: 30px 20px;
         float: left;
         clear: both;
-        margin-top: 104px;
     }
     .site-title a.social_stuff {
         display: none;
