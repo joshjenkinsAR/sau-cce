@@ -66,7 +66,7 @@ do_action( 'genesis_after_footer' );
 			<div class="one-fourth about">
 			<div class="foot-actions">
 			<a href="https://web.saumag.edu/calendar"><i class="fa fa-calendar-o"></i>Calendar of Events</a>
-			<a href="https://admin.saumag.edu/cc3/giving.html"><i class="fa fa-gift "></i>Make a Gift</a>
+			<a href="https://saufoundation.org/make-a-gift/"><i class="fa fa-gift "></i>Make a Gift</a>
 			<a href="https://web.saumag.edu/ask"><i class="fa fa-question-circle"></i>Ask a Question</a>
 			<a href="http://photos.saumag.edu"><i class="fa fa-camera-retro"></i>Photos.SAUmag.edu</a>
 			<a href="https://web.saumag.edu/apply"><i class="fa fa-check-square-o "></i>Apply Now</a>

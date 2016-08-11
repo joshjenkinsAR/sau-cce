@@ -44,12 +44,11 @@ if ( $query->have_posts() )
 		
 		?>
 	<div class="dp-wrap">
-
-			<div class="dp-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
-	<div class="dp-title"><h3><a href="<?php the_permalink(); ?>">
-		<?php the_title(); ?>
-		</a></h3></div>
-<div class="college-department"><?php the_field('department_college');?></div>		
+<div class="dp-title"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?>
+		</a></h3></div>		
+			<div class="dp-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('tile'); ?></a></div>
+	
+		
 <div class="pills">
 <?php
 $terms = get_the_terms( $post->ID, 'types' );
@@ -59,6 +58,7 @@ if ($terms && ! is_wp_error($terms)): ?>
     <?php endforeach; ?>
 <?php endif; ?>
 </div>	
+<div class="program-excerpt"><?php the_excerpt(); ?></div>
    </div>
 		<?php
 	}

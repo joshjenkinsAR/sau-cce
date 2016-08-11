@@ -45,7 +45,7 @@ wp_head(); /** we need this for plugins **/
                     <li><a href="https://wamp.saumag.edu/sys_status/status.php">Systems Status</a></li>
 					<li style="border: none;"><a href="/library">Library</a></li>
 				</ul></li>
-			<li class="head-give"><a href="https://admin.saumag.edu/cc3/giving.html" target="_blank"><i class="fa fa-gift"></i> Give</a></li>
+			<li class="head-give"><a href="https://saufoundation.org/make-a-gift/" target="_blank"><i class="fa fa-gift"></i> Give</a></li>
 			<li class="head-give"><a href="https://web.saumag.edu/admissions/campus-tours/"><i class="fa fa-map-marker"></i> Tour</a></li>
 			<li class="head-give"><a href="https://web.saumag.edu/admissions/apply/"><i class="fa fa-check-square-o"></i> Apply</a></li>
 			</ul>

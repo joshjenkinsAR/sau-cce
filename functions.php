@@ -578,3 +578,11 @@ function add_styles( $value, $form ) {
 
     return array( 'print_entry' );
 }
+
+
+/***
+* cache busting
+***/
+if ( class_exists( 'Storm_Busted' ) ) {
+	add_action( 'wp_print_styles', 'Storm_Busted::wp_print_scripts', PHP_INT_MAX - 1 );
+};

@@ -13,6 +13,7 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 //* Add program header
 function sau_program_header() {
+	$prog_title = get_the_title();
 if (has_post_thumbnail( $post->ID ) ):
 $thumb_id = get_post_thumbnail_id();
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'program-image', true);
@@ -20,15 +21,11 @@ $thumb_url = $thumb_url_array[0];
 else:
     $image = array( '/images/featured.jpg' ); 
 endif;
-printf( '<div class="program-head"><img src="%s" />', $thumb_url);
+printf( '<div class="program-head"><div class="program-title"><span>%s</span></div><img src="%s" />', $prog_title, $thumb_url);
 echo '</div>';
 }
 add_action('genesis_before_loop', 'sau_program_header');
-
-//* Display College and Department
-function sau_program_department() {
-}
-add_action('genesis_entry_header','sau_program_department'); 
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 //* Pull in custom fields content
 function sau_program_tabs() {

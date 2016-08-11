@@ -53,8 +53,6 @@ echo '<style>p.not-found-text { width: 800px; max-width: 100%; font-size: 20px; 
 		echo '<div class="entry-content">';
 
 			if ( genesis_html5() ) :
-
-				echo '<img class="not-found-image" src="https://web.saumag.edu/files/2015/11/404pagelighter.png">';
 				
 				echo '<p class="not-found-text">You didn’t find what you were looking for this time, but be stubborn as a mule and saddle up in the search bar to locate the SAU webpage you seek.  We’re sure you’ll be braying in celebration when you land your virtual greener pasture.</p>';
 

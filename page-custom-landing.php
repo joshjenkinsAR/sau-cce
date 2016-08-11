@@ -77,9 +77,9 @@ function flexible_content_sau(){
 				
 			
 			if( get_row_layout() == 'big_text_block' ){ 
-				$big_text_background = get_sub_field('big_text_background');
+				$big_text_background = get_sub_field('big_text_background_image');
 				$big_text_title = get_sub_field('big_text_title');
-			    echo '<div id="' . $big_text_title . '" class="big-text-block" background="url(' . $big_text_background .')"><div class="big-text-wrap wow fadeInUp" data-wow-delay=".75s">';
+			    echo '<div id="' . $big_text_title . '" class="big-text-block" style="background: url(' . $big_text_background .') no-repeat; background-size: cover;"><div class="big-text-wrap wow fadeInUp" data-wow-delay=".75s">';
 				the_sub_field('big_text');
 				echo '</div></div>';
 			}
