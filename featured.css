@@ -85,7 +85,7 @@ h1.entry-title {
 @media only screen and  (max-width: 768px) {
 body.single-post .site-title {
     display: block;
-    height: 275px;
+    height: 215px;
     padding-top: 0px;
     float: none;
     visibility: hidden;

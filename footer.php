@@ -52,7 +52,7 @@ do_action( 'genesis_after_footer' );
 				<li><a href="https://www.getrave.com/login/saumag">Campus Emergency Alerts</a></li>
 			</ul>
 		</div>
-		<div class="one-fourth social"><h3>Social</h3>
+		<div class="one-fourth social"><a href="https://web.saumag.edu/social/"><h3>Social</h3></a>
 		<div class="social-icons">
 <a href="https://www.facebook.com/SouthernArkansasUniversity"><img src="https://web.saumag.edu/wp-content/themes/sau-cce/images/facebook_square_gray.png" alt="SAU on Facebook"></a>
 <a href="https://twitter.com/muleriders"><img src="https://web.saumag.edu/wp-content/themes/sau-cce/images/twitter_square_gray.png" alt="SAU on Twitter"></a>

@@ -167,6 +167,16 @@ function flexible_content_sau(){
 				the_sub_field('plain_text_field');
 				echo '</div>';
 			}
+			if( get_row_layout() == 'bam_spotlight' ){ 
+			$quote_text = get_sub_field('quote_text');
+			
+			    echo '<div class="bam-spotlight"><img class="large-image" alt="BAM Spotlight image" src="';
+				the_sub_field("large_image");
+				echo '"/><img class="small-image" alt="BAM Spotlight image" src="';
+				the_sub_field("small_image");
+				echo '" />';
+				echo '<div class="quote-text">' . $quote_text .'</div></div>';
+			}
 			
 			if( get_row_layout() == 'action_buttons' ){ 
 			echo '<div id="actions"><ul>';

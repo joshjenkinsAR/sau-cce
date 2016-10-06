@@ -2,7 +2,7 @@
 	Theme Name: sau-cce
 	Author: Josh Jenkins
 	Template: genesis
-	Version: 2.3.1
+	Version: 2.3.2
     GitHub Theme URI: https://github.com/joshjenkinsAR/sau-cce
     GitHub Branch:    master
 */
@@ -1080,6 +1080,9 @@ Site Navigation
 .genesis-nav-menu .sub-menu .sub-menu {
     margin: -46px 0 0 250px;
 }
+.genesis-nav-menu #menu-item-49855 .sub-menu .sub-menu {
+    margin: -46px 0 0 -250px;
+}
 .genesis-nav-menu .sub-menu .sub-menu a {
     background: #222;
     border-color: #303030;
@@ -1167,7 +1170,14 @@ nav.nav-primary {
 	content: '\f105'; 
 	right: 20px;
 }
-.nav-primary .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu span:after {
+.nav-primary #menu-item-49855.menu-item-has-children .sub-menu .menu-item-has-children span:before {
+	content: '\f104';
+	padding-right: 15px;
+	margin-left:    -15px;
+	color: #999;
+	font-family: 'FontAwesome';
+}
+.nav-primary #menu-item-49855.menu-item-has-children .sub-menu .menu-item-has-children span:after, .nav-primary .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu span:after, .nav-primary #menu-item-49855.menu-item-has-children .menu-item-has-children .sub-menu span:before {
 	content: none; 
 }
 .nav-primary .genesis-nav-menu .sub-menu a {
@@ -2394,7 +2404,7 @@ Media Queries
             position: relative;
         }
         #search input[type="search"] {
-            width: 120px !important;
+            width: 75% !important;
         }
         #program-search .what {
             font-size: 22px;
@@ -2424,10 +2434,21 @@ Media Queries
         #generalFooter .wrap {
             padding-top: 0px;
         }
+		.homeFooter .one-fourth {
+    width: 100%;
+}
         .metaslider {
             display: none;
         }
     }
+	
+    @media only screen and (max-width: 480px) {
+		img.size-medium {
+    float: none;
+    margin: 0 auto 20px;
+    display: block;
+		}
+	}
     @media only screen and (max-width: 420px) {
         #generalFooter .wrap {
             background: none;

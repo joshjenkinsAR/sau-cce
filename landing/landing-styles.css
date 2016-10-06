@@ -15,7 +15,7 @@ body.page-template-page-custom-landing-php .full-width-content .content {
 header.entry-header {
     display: none;
 }
-div#main-content-wrap {
+.page-template-page-custom-landing div#main-content-wrap {
     padding: 0px;
     margin-top: -36px;
 }
@@ -268,6 +268,53 @@ padding-bottom: 20px;
     padding: 50px 6%;
     text-align: center;
 }
+#actions ul {
+    margin-bottom: 0px;
+}
+img.small-image, .quote-text {
+    display: none;
+}
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+	font-size: 10px !important;
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	font-size: 16px !important;
+}
+body .gform_wrapper ul li {
+	margin: 0px !important; 
+}
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_first, .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_last, .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield span.name_middle {
+    padding-top: 2px;
+    margin: 0px;
+    float: left;
+    padding-right: 20px;
+}
+div#program-search {
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    padding: 100px 0px;
+}
+#program-search h4 {
+font-size: 30px;
+font-family: 'Roboto Slab' !important;
+font-weight: 500 !important;
+margin-bottom: 50px;
+color: #EAEAEA !important;
+background: url('/wp-content/themes/sau-cce/images/transpBlack75.png');
+display: inline-block;
+padding: 9px 20px;
+border-left: 5px solid #D2B525;
+}
+#program-search input {
+width: 490px;
+max-width: 95%;
+border: 1px solid #D0D0D0;
+background: #FFF !important;
+color: #444;
+font-family: 'Open Sans';
+font-size: 17px;
+}
 @media (max-width: 1200px)  {
 .landing-menu.wrap.sticky {
 padding-left: 0px;
@@ -276,6 +323,21 @@ padding-left: 0px;
 @media (max-width: 1026px)  {
 .landing-menu.wrap.sticky {
 position: relative;
+}
+img.large-image {
+    display: none;
+}
+img.small-image, .quote-text {
+    display: block;
+}
+.quote-text {
+    background: #444;
+    padding: 28px 7%;
+    color: #FFF;
+    font-size: 20px;
+}
+div.program-details {
+    padding: 10px 30px;
 }
 }
 @media (max-width: 900px)  {
@@ -297,8 +359,11 @@ div.big-text-block {
 }
 }
 @media (max-width: 768px)  {
+	.bam-spotlight {
+    margin-top: 0px !important;
+}
 body.page-template-page-custom-landing-php .contents.wrap {
-    padding-top: 163px;
+    padding-top: 36px;
 }
 .title-block-title {
     font-size: 4rem;
@@ -337,11 +402,6 @@ padding-left: 50px;
 display: none;
 }
 }
-@media (max-width: 640px) {
-    body.page-template-page-custom-landing-php .contents.wrap {
-    padding-top: 59px;
-}
-}
 @media (max-width: 600px) {
 .title-block-title {
     font-size: 30px;
@@ -367,6 +427,7 @@ display: none;
 div.big-text-block {
     padding: 30px 3%;
     font-size: 22px;
+	background: transparent !important;
 }
 
 body.page-template-page-custom-landing-php .full-width-content .content {
@@ -383,5 +444,8 @@ margin: 0 auto;
 }
 .slide-text-panels div#owl {
     margin-top: 0px;
+}
+.quote-text {
+    font-size: 16px;
 }
 }
