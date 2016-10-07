@@ -2,7 +2,7 @@
 	Theme Name: sau-cce
 	Author: Josh Jenkins
 	Template: genesis
-	Version: 2.3.2
+	Version: 2.3.3
     GitHub Theme URI: https://github.com/joshjenkinsAR/sau-cce
     GitHub Branch:    master
 */
@@ -202,8 +202,8 @@ html {
 body {
     color: #333;
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 15px !important;
-    line-height: 1.525 !important;
+    font-size: 17px !important;
+    line-height: 1.625 !important;
 }
 
 ::-moz-selection {
@@ -283,29 +283,31 @@ hr {
 h1, h2, h3, h4, h5, h6, #shared-faqs .pcs-post-title {
     color: #555 !important;
     font-family: 'Roboto Slab', 'Open Sans', Helvetica, Helvetica Neue, sans-serif !important;
-    font-weight: 600 !important;
-    line-height: 1.2;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
     margin: 30px 0 15px;
     margin: 3rem 0 1.5rem;
 }
 h1 {
-    font-size: 30px !important;
-    font-size: 3rem !important;
+    font-size: 32px !important;
+    font-size: 3.2rem !important;
 }
 h2 {
     font-family: 'Open Sans', sans-serif, !important;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-weight: 700;
+    font-weight: 500;
 }
 .entry-content h2 {
-    font-size: 26px;
+    font-size: 28px;
 }
 .entry-content h3 {
-    font-size: 22px;
+    font-size: 24px;.su-button-style-default span, .su-button {
+    border-radius: 0px !important;
+}
 }
 .entry-content h4 {
-    font-size: 18px;
+    font-size: 19px;
 }
 .entry-content h5 {
     font-size: 16px;
@@ -1842,7 +1844,9 @@ Animated top menu */
 .shrink .nav-primary .wrap {
     right: 200px;
 }
-
+.su-button-style-default span, .su-button {
+    border-radius: 0px !important;
+}
 /*** Sidebar menus ****/
 
 .menu-widget {
