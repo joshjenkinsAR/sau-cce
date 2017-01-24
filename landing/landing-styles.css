@@ -315,6 +315,12 @@ color: #444;
 font-family: 'Open Sans';
 font-size: 17px;
 }
+
+img.large-image, img.small-image {
+    width: 100%;
+}
+
+
 @media (max-width: 1200px)  {
 .landing-menu.wrap.sticky {
 padding-left: 0px;
