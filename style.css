@@ -2,7 +2,7 @@
 	Theme Name: sau-cce
 	Author: Josh Jenkins
 	Template: genesis
-	Version: 2.3.3
+	Version: 2.3.1
     GitHub Theme URI: https://github.com/joshjenkinsAR/sau-cce
     GitHub Branch:    master
 */
@@ -202,8 +202,8 @@ html {
 body {
     color: #333;
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 17px !important;
-    line-height: 1.625 !important;
+    font-size: 15px !important;
+    line-height: 1.525 !important;
 }
 
 ::-moz-selection {
@@ -283,31 +283,29 @@ hr {
 h1, h2, h3, h4, h5, h6, #shared-faqs .pcs-post-title {
     color: #555 !important;
     font-family: 'Roboto Slab', 'Open Sans', Helvetica, Helvetica Neue, sans-serif !important;
-    font-weight: 500 !important;
-    line-height: 1.6 !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
     margin: 30px 0 15px;
     margin: 3rem 0 1.5rem;
 }
 h1 {
-    font-size: 32px !important;
-    font-size: 3.2rem !important;
+    font-size: 30px !important;
+    font-size: 3rem !important;
 }
 h2 {
     font-family: 'Open Sans', sans-serif, !important;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-weight: 500;
+    font-weight: 700;
 }
 .entry-content h2 {
-    font-size: 28px;
+    font-size: 26px;
 }
 .entry-content h3 {
-    font-size: 24px;.su-button-style-default span, .su-button {
-    border-radius: 0px !important;
-}
+    font-size: 22px;
 }
 .entry-content h4 {
-    font-size: 19px;
+    font-size: 18px;
 }
 .entry-content h5 {
     font-size: 16px;
@@ -776,11 +774,15 @@ div.gform_wrapper .ginput_complex label {
     border: 1px solid #CCC;
 }
 .gfield_description {
-    background: #F7F7F7;
     padding: 4px 12px !important;
     color: #666;
     font-style: italic;
+    font-size: 14px !important;
 }
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+	font-size: 12px !important;
+}
+
 div.gform_wrapper .gform_footer input[type="submit"] {
     font-size: 16px;
     font-size: 1.6rem;
@@ -1844,9 +1846,7 @@ Animated top menu */
 .shrink .nav-primary .wrap {
     right: 200px;
 }
-.su-button-style-default span, .su-button {
-    border-radius: 0px !important;
-}
+
 /*** Sidebar menus ****/
 
 .menu-widget {
