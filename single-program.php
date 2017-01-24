@@ -67,7 +67,11 @@ echo $types;  ?></td></tr>
 $terms = strip_tags ( $terms );
 echo $terms; ?></td></tr></tbody></table>
   </div>  
-  <?php the_content();?>
+<?php 
+$thecontent = get_the_content();
+if(!empty($thecontent)) {
+	echo $thecontent;
+} ?>
   <p style="display: none;"><?php the_field('keywords'); ?></p></div>
    <div role="tabpanel" class="tab-pane fade" id="courses"><p><?php the_field('Courses'); ?></p></div>
   <div role="tabpanel" class="tab-pane fade" id="catalog"><p><?php the_field('Catalog Entry'); ?></p><p><?php if (get_field('minor_requirements')) {
