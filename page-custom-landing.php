@@ -13,6 +13,18 @@ function add_body_class( $classes ) {
 
 }
 
+//* Execute shortcodes in text area fields
+function text_area_shortcode($value, $post_id, $field) {
+  if (is_admin()) {
+    // don't do this in the admin
+    // could have unintended side effects
+    return;
+  }
+  do_shortcode($value);
+  return $value;
+}
+add_filter('acf/load_value/type=textarea', 'text_area_shortcode', 10, 3);
+
 function flexible_content_menu_loop(){
 	if( have_rows('blocks') ):
 	
